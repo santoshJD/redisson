@@ -41,7 +41,7 @@ public class RedisURI {
         if (ipV6Host.contains("@")) {
             ipV6Host = ipV6Host.split("@")[1];
         }
-        if (ipV6Host.contains(":")) {
+         if (ipV6Host.contains(":") && !(ipV6Host.contains("["))) {
             urlHost = urlHost.replace(ipV6Host, "[" + ipV6Host + "]");
         }
 
